@@ -50,8 +50,8 @@ const Chats = () => {
           <center>
           <div>         
         <center>
-        {chats.map((item) => {
-          return <div style={{border:'1px solid black',marginBottom:'6px', width: '60%',padding:'5px',borderRadius:'10px',backgroundColor:'white', flexDirection: 'column-reverse'}} key={item.id}>{item.text}</div>
+        {chats.map((item, index) => {
+          return <div key={index} style={{border:'1px solid black',marginBottom:'6px', width: '60%',padding:'5px',borderRadius:'10px',backgroundColor:'white', flexDirection: 'column-reverse'}} >{item.text}</div>
         })}
         </center>
       </div>

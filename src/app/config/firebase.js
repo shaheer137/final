@@ -84,7 +84,7 @@ async function getUsers() {
   return list;
 }
 
-async function post( description, file) {
+async function post( description, file, type) {
   try {
     const url = await uploadImage(file)
     const videoUrl = await uploadVideo(file);
@@ -92,7 +92,8 @@ async function post( description, file) {
    const docRef =  await addDoc(collection(db, "data"), {
       description,
       imageUrl: url,
-      videoUrl,
+      video : videoUrl,
+      type: type
     });
     alert('Post posted successfully')
   } catch (e) {
